@@ -1,0 +1,23 @@
+.close-icon {
+    color: #bfbfbf;
+    width: 35px;
+    height: 30px;
+    transition: color 0.3s;
+    &:hover {
+        transition: color 0.3s;
+        color: #fff;
+    }
+}
+
+.prev-icon,
+.next-icon {
+    color: #bfbfbf;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: color 0.3s;
+    &:hover {
+        transition: color 0.3s;
+        color: #fff;
+    }
+}
