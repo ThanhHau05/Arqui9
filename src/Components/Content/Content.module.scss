@@ -1,0 +1,38 @@
+.wrapper {
+    display: flex;
+    max-width: 1800px;
+    justify-content: center;
+    padding: 7vw 3vw 6vw;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.title-container h2 {
+    font-size: calc((2.45 - 1) * 1.2vw + 1rem);
+}
+
+.title-container h2 em {
+    font-weight: 100;
+}
+
+.title-container h2 strong em {
+    font-weight: bold;
+}
+
+.title-container {
+    padding-left: 35px;
+}
+
+.content-container {
+    width: 36%;
+    font-size: calc((1.46 - 1) * 1.2vw + 1rem);
+    letter-spacing: 0.05em;
+    margin-right: 35px;
+}
+
+.content-container p {
+    margin-bottom: 24px;
+}

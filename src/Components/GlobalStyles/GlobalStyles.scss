@@ -1,5 +1,16 @@
 @import 'normalize.css';
 
+@font-face {
+    font-family: 'Oswald';
+    src: url('/fonts/Oswald-Light.eot');
+    src: url('/fonts/Oswald-Light.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/Oswald-Light.woff2') format('woff2'), url('/fonts/Oswald-Light.woff') format('woff'),
+        url('/fonts/Oswald-Light.ttf') format('truetype'), url('/fonts/Oswald-Light.svg#Oswald-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
 :root {
 }
 
@@ -11,11 +22,12 @@
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'proxima-nova', sans-serif;
+    font-family: 'Oswald', sans-serif;
     font-size: 1.6rem;
     text-rendering: optimizeSpeed;
-    line-height: 1.5;
+    line-height: 1.4;
 }

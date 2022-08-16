@@ -1,0 +1,47 @@
+.container {
+    opacity: 0;
+    position: fixed;
+    display: flex;
+    height: 40px;
+    width: 40px;
+    z-index: 2;
+    right: 20px;
+    bottom: 20px;
+    justify-content: center;
+    transition: 0.2s;
+}
+
+.button {
+    border: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-color: #000;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.button h5 {
+    color: #fff;
+    transition: opacity 0.6s ease-in-out;
+}
+
+.show {
+    opacity: 1;
+    transition: 0.5s;
+}
+
+@media only screen and (max-width: 63.9375em) {
+}
+
+/* Mobile: width < 740px */
+@media only screen and (max-width: 46.1875em) {
+    .container {
+        display: none;
+    }
+}
+
+/* Tablet: width >= 740px and width < 1024px */
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+}
