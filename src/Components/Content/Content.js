@@ -2,35 +2,20 @@ import styles from './Content.module.scss';
 import classNames from 'classnames/bind';
 const cx = classNames.bind(styles);
 
-function Content({ data_title, data_content, title_reverse = false }) {
+function Content({ data_title, data_content, classh2, classcontainer }) {
     const _handleContent = () => {
         return data_content.map((item, index) => <div key={index}>{item.content}</div>);
+    };
+    const _handleRenderTitle = () => {
+        return data_title.map((item, index) => <span key={index}>{item.title}</span>);
     };
     return (
         <div className={cx('wrapper')}>
             <div className={cx('container')}>
-                <div className={cx('total-title')}>
-                    {title_reverse ? (
-                        <div className={cx('title-container')}>
-                            <h2>
-                                <em>{data_title.title2}</em>
-                                <strong>
-                                    <em>{data_title.title1}</em>
-                                </strong>
-                            </h2>
-                        </div>
-                    ) : (
-                        <div className={cx('title-container')}>
-                            <h2>
-                                <strong>
-                                    <em>{data_title.title1}</em>
-                                </strong>
-                                <em>{data_title.title2}</em>
-                            </h2>
-                        </div>
-                    )}
+                <div className={cx('title-container')}>
+                    <h2 className={cx(classh2)}>{_handleRenderTitle()}</h2>
                 </div>
-                <div className={cx('content-container')}>{_handleContent()}</div>
+                <div className={cx('content-container', classcontainer)}>{_handleContent()}</div>
             </div>
         </div>
     );

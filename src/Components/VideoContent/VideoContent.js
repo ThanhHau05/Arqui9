@@ -2,7 +2,7 @@ import styles from './VideoContent.module.scss';
 import classNames from 'classnames/bind';
 const cx = classNames.bind(styles);
 
-function VideoContent({ data, architectural }) {
+function VideoContent({ data, architectural, classh1 }) {
     const classes = {
         architectural,
     };
@@ -14,11 +14,11 @@ function VideoContent({ data, architectural }) {
             <div className={cx('content-video-wrapper')}>
                 <div className={cx('content-video-container', classes)}>
                     <div className={cx('content-video')}>
-                        <h1>
+                        <h1 className={cx(classh1)}>
                             <strong>
                                 <em>{data.text_bold}</em>
                             </strong>
-                            <br></br>
+                            {classh1 ? <>&#160;</> : <br></br>}
                             <em>{data.text_lower}</em>
                         </h1>
                         {data.text_content && <p>{data.text_content}</p>}

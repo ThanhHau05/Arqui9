@@ -4,14 +4,23 @@ import { Videos } from '~/Videos/Videos';
 import VideoContent from '~/Components/VideoContent';
 import Content from '~/Components/Content';
 import { ImagesHomeProduct } from '~/Images/ImagesHomeProduct';
+import { ImagesHomeProductVisualisation } from '~/Images/ImagesHomeProductVisualisation';
 import DisplayProduct from '~/Components/DisplayProduct';
 const cx = classNames.bind(styles);
 
 const CONTENT_IDEAS_INTO_REALITY = {
-    title: {
-        title1: 'IDEAS INTO ',
-        title2: 'REALITY',
-    },
+    title: [
+        {
+            title: (
+                <strong>
+                    <em>IDEAS INTO </em>
+                </strong>
+            ),
+        },
+        {
+            title: <em>REALITY</em>,
+        },
+    ],
     content: [
         {
             content: (
@@ -59,6 +68,27 @@ const CONTENT_VIDEOS = {
             href: '/visualisation',
         },
     },
+    product: {
+        video: Videos.Video_Product,
+        text_bold: 'PRODUCT ',
+        text_lower: 'VISUALISATION',
+        text_content:
+            'We have come to embrace and innovate in the Green Energy and Biomedical product sectors. Creating stories and journeys that create value and investment opportunities for our clients.',
+        button_more: {
+            title: 'Learn more',
+            href: '/product',
+        },
+    },
+    meta: {
+        video: Videos.Video_Home,
+        text_bold: 'META',
+        text_content:
+            'Innovators in the metaverse space, Arqui9 has systemically developed various levels of alternate realities, through architectural form and expression. We design, create and explore the alternate worlds for clients in the digital space, creating VR, AR solutions that have become a part of our collective journey.',
+        button_more: {
+            title: 'Learn more',
+            href: '/product',
+        },
+    },
 };
 
 const DISPLAY_PRODUCT = [
@@ -95,6 +125,113 @@ const DISPLAY_PRODUCT = [
         title: 'Undisclosed / Germany',
     },
 ];
+const DISPLAY_PRODUCT_TECHNOLOGICAL = [
+    {
+        image: ImagesHomeProductVisualisation[0],
+        title: 'Ferrari / SF90',
+    },
+    {
+        image: ImagesHomeProductVisualisation[1],
+        title: 'Energy Vault / Dubai',
+    },
+];
+const CONTENT_TECHNOLOGICAL = {
+    title: [
+        {
+            title: (
+                <span>
+                    <strong>
+                        <em>THE GREEN </em>
+                    </strong>
+                    <em>TECHNOLOGICAL </em>
+                </span>
+            ),
+        },
+        {
+            title: <em>REVOLUTION</em>,
+        },
+    ],
+    content: [
+        {
+            content: (
+                <p>
+                    Arqui9 has come to lead the way in <strong>creating visual guides</strong> for IPO’s and investor
+                    relations, bringing the most diverse and creative minds together to{' '}
+                    <strong>create visually engaging storylines</strong> that break down the tech into easily relatable
+                    and sharable media. We offer;
+                </p>
+            ),
+        },
+        {
+            content: (
+                <ul style={{ paddingLeft: '20px' }}>
+                    <li>
+                        <p>Unique enticing visual stills, animations and narratives</p>
+                    </li>
+                    <li>
+                        <p>Cinemagraphs, social media content creation</p>
+                    </li>
+                    <li>
+                        <p>Interactive VR technology</p>
+                    </li>
+                </ul>
+            ),
+        },
+        {
+            content: (
+                <p style={{ marginBottom: '0', marginTop: '24px' }}>
+                    Find out about how we helped <a href="/energyvaultinc">EnergyVaultInc</a> in bringing their vision
+                    to life.
+                </p>
+            ),
+        },
+    ],
+};
+const CONTENT_REALITIES = {
+    title: [
+        {
+            title: (
+                <strong>
+                    <em>REALITIES </em>
+                </strong>
+            ),
+        },
+        {
+            title: <em>BEYOND</em>,
+        },
+    ],
+    content: [
+        {
+            content: (
+                <p>
+                    New forms of technology are changing the way we interact with media and content,{' '}
+                    <strong>VR, AR and Web 3.0</strong> (Metaverse) all propose a different approach which we are
+                    leading the way forward in creating.
+                </p>
+            ),
+        },
+        {
+            content: (
+                <p>We offer solutions that fit into each realm, from concept to final marketing plan Including:</p>
+            ),
+        },
+        {
+            content: (
+                <ul style={{ paddingLeft: '20px' }}>
+                    <li>
+                        <p>360 Stereoscopic real-time VR walkthroughs, compatible with (Oculus Rift, HTC Vive, etc),</p>
+                    </li>
+                    <li>
+                        <p>Interactive metaverse worlds connected with e-commerce</p>
+                    </li>
+                    <li>
+                        <p>3D model and design consultancy</p>
+                    </li>
+                </ul>
+            ),
+        },
+    ],
+};
 function Home() {
     return (
         <div className={cx('wrapper')}>
@@ -107,6 +244,20 @@ function Home() {
             </div>
             <VideoContent data={CONTENT_VIDEOS.architectural} architectural />
             <DisplayProduct data={DISPLAY_PRODUCT} />
+            <div className={cx('technological-content')}>
+                <Content
+                    classh2="technological-title"
+                    classcontainer="technological-content-container"
+                    data_title={CONTENT_TECHNOLOGICAL.title}
+                    data_content={CONTENT_TECHNOLOGICAL.content}
+                />
+            </div>
+            <VideoContent classh1="product-video-h1" data={CONTENT_VIDEOS.product} />
+            <DisplayProduct data={DISPLAY_PRODUCT_TECHNOLOGICAL} />
+            <div className={cx('realities-content')}>
+                <Content data_title={CONTENT_REALITIES.title} data_content={CONTENT_REALITIES.content} />
+            </div>
+            <VideoContent data={CONTENT_VIDEOS.meta} />
         </div>
     );
 }

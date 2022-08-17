@@ -14,14 +14,6 @@
     font-size: calc((2.45 - 1) * 1.2vw + 1rem);
 }
 
-.title-container h2 em {
-    font-weight: 100;
-}
-
-.title-container h2 strong em {
-    font-weight: bold;
-}
-
 .title-container {
     padding-left: 35px;
 }
@@ -35,4 +27,46 @@
 
 .content-container p {
     margin-bottom: 24px;
+}
+
+.technological-title {
+    display: flex;
+    flex-direction: column;
+    padding-left: 40px;
+    line-height: 43px;
+}
+
+.title-container strong em,
+.technological-title strong em {
+    font-weight: bold;
+}
+
+.title-container em,
+.technological-title em {
+    font-weight: 100;
+}
+
+.content-container ul {
+    list-style-type: none;
+}
+
+.content-container ul p {
+    margin: 0.5rem 0;
+    &::before {
+        padding-right: 10px;
+        content: '\2022';
+    }
+}
+
+.content-container p a {
+    color: #000;
+    text-decoration-line: 1px;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+}
+
+.technological-content-container {
+    margin-right: 70px;
+    padding-right: 10px;
+    width: 37%;
 }
