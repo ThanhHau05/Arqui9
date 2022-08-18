@@ -1,3 +1,97 @@
+.their-content,
 .realities-content {
     background-color: #f0f0f0;
+}
+
+.trademark-wrap {
+    padding: 6.6vw;
+}
+
+.trademark-image-container img {
+    width: 100%;
+    height: 100%;
+}
+
+.trademark {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    margin: 0 8%;
+    row-gap: 25%;
+}
+
+.trademark-image-container {
+    max-width: 159px;
+    margin: 0 auto;
+}
+
+.trademark-title {
+    padding: 0 0 12rem 16rem;
+    font-size: calc((1.7 - 1) * 1.2vw + 1rem);
+}
+
+.trademark-title h2 strong em {
+    font-weight: bold;
+}
+
+.trademark-title h2 em {
+    font-weight: 100;
+}
+
+.trademark-line {
+    height: 1px;
+    padding: 8%;
+}
+
+.their-wrap {
+    display: flex;
+    max-width: 1800px;
+    justify-content: center;
+    padding: 7vw 3vw 6vw;
+}
+
+.their-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.their-title h2 {
+    font-size: calc((2.45 - 1) * 1.2vw + 1rem);
+}
+
+.their-title {
+    padding-left: 35px;
+}
+
+.their-content_content {
+    width: 36%;
+    font-size: calc((1.46 - 1) * 1.2vw + 1rem);
+    letter-spacing: 0.05em;
+    margin-right: 35px;
+}
+
+.their-content_content p {
+    margin-bottom: 24px;
+}
+
+.their-title h2 em {
+    font-weight: 100;
+}
+
+.their-title h2 strong em {
+    font-weight: bold;
+}
+
+.their-content-list {
+    display: grid;
+    padding-top: 15%;
+    grid-template-columns: 50% 50%;
+}
+
+.their-text {
+    font-size: calc((1.35 - 1) * 1.2vw + 1rem);
+    font-style: italic;
+}
+
+p strong {
+    font-size: calc((1.35 - 1) * 1.2vw + 1rem);
 }

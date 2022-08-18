@@ -36,14 +36,14 @@
     line-height: 43px;
 }
 
-.title-container strong em,
-.technological-title strong em {
-    font-weight: bold;
+.title-container em,
+.title em {
+    font-weight: 100;
 }
 
-.title-container em,
-.technological-title em {
-    font-weight: 100;
+.title-container strong em,
+.title > span > strong > em {
+    font-weight: bold;
 }
 
 .content-container ul {

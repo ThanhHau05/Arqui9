@@ -5,6 +5,7 @@ import VideoContent from '~/Components/VideoContent';
 import Content from '~/Components/Content';
 import { ImagesHomeProduct } from '~/Images/ImagesHomeProduct';
 import { ImagesHomeProductVisualisation } from '~/Images/ImagesHomeProductVisualisation';
+import { ImagesHomeLogo } from '~/Images/ImagesHomeLogo';
 import DisplayProduct from '~/Components/DisplayProduct';
 const cx = classNames.bind(styles);
 
@@ -232,7 +233,106 @@ const CONTENT_REALITIES = {
         },
     ],
 };
+
+const CONTENT_THEIR = {
+    title: [
+        {
+            title: (
+                <trong>
+                    <em style={{ fontWeight: 'bold' }}>THEIR </em>
+                </trong>
+            ),
+        },
+        {
+            title: <em>FEEDBACK</em>,
+        },
+    ],
+    content: [
+        {
+            content: <p>AECOM</p>,
+        },
+        {
+            content: (
+                <p className={cx('their-text')}>
+                    “In the design field the most fundamental skill we can hope to have is to translate what we create
+                    in our imagination and into a relatable and understandable proposal. Arqui9 are exactly the kind of
+                    partner you need for that, they implicitly understand what we are trying to achieve and they always
+                    make it better than we ever imagined.”
+                </p>
+            ),
+        },
+        {
+            content: <p>Steven Velegrinis, Head of Masterplanning AECOM</p>,
+        },
+    ],
+    content_list_1: [
+        {
+            content: <h2 style={{ fontWeight: 'normal', fontSize: '2.58rem', marginBottom: '24px' }}>BPTW London</h2>,
+        },
+        {
+            content: (
+                <p className={cx('their-text')}>
+                    “We worked together with Arqui9 recently on two large scale projects located in London. Arqui9
+                    translated our vision into unique visuals which really captured the essence of the project.
+                </p>
+            ),
+        },
+        {
+            content: (
+                <p className={cx('their-text')}>
+                    Their adaptive and tailored process allowed us to accompany every step of the way through an
+                    artistic and creative approach. Meeting our requested deadlines and fitting those extra small
+                    details that always count at the very end.”
+                </p>
+            ),
+        },
+        {
+            content: (
+                <p>
+                    <strong>Chris Bath, Director of Architecture</strong>
+                </p>
+            ),
+        },
+    ],
+    content_list_2: [
+        {
+            content: (
+                <h2 style={{ fontWeight: 'normal', fontSize: '2.58rem', marginBottom: '24px' }}>Energy Vault Inc</h2>
+            ),
+        },
+        {
+            content: (
+                <p className={cx('their-text')}>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Lorem ipsum dolor sit amet. Mauris nunc congue nisi vitae suscipit tellus
+                    mauris a diam. Sed lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi. Viverra ipsum
+                    nunc aliquet bibendum enim.
+                </p>
+            ),
+        },
+        {
+            content: (
+                <p>
+                    <strong>Laurence Alexandre, Head of Marketing</strong>
+                </p>
+            ),
+        },
+    ],
+};
 function Home() {
+    const _handleRenderTrademarks = () => {
+        return ImagesHomeLogo.map((item, index) => (
+            <div key={index} className={cx('trademark-image-container')}>
+                <img src={item} alt="" />
+            </div>
+        ));
+    };
+    const _handleRenderTitle = (value) => {
+        return value.map((item, index) => <span key={index}>{item.title}</span>);
+    };
+    const _handleRenderContent = (value) => {
+        return value.map((item, index) => <div key={index}>{item.content}</div>);
+    };
     return (
         <div className={cx('wrapper')}>
             <VideoContent data={CONTENT_VIDEOS.home} />
@@ -258,6 +358,41 @@ function Home() {
                 <Content data_title={CONTENT_REALITIES.title} data_content={CONTENT_REALITIES.content} />
             </div>
             <VideoContent data={CONTENT_VIDEOS.meta} />
+            <div className={cx('trademark-wrap')}>
+                <div className={cx('trademark-container')}>
+                    <div className={cx('trademark-title')}>
+                        <h2>
+                            <em>OUR</em>
+                            <strong>
+                                <em> CLIENTS</em>
+                            </strong>
+                        </h2>
+                    </div>
+                    <span className={cx('trademark-line')}></span>
+                    <div className={cx('trademark')}>{_handleRenderTrademarks()}</div>
+                </div>
+            </div>
+            <div className={cx('trademark-line')}></div>
+            <div className={cx('their-content')}>
+                <div className={cx('their-wrap')}>
+                    <div className={cx('their-container')}>
+                        <div className={cx('their-title')}>
+                            <h2>{_handleRenderTitle(CONTENT_THEIR.title)}</h2>
+                        </div>
+                        <div className={cx('their-content_content')}>
+                            <div>{_handleRenderContent(CONTENT_THEIR.content)}</div>
+                            <div className={cx('their-content-list')}>
+                                <div style={{ padding: '17px' }}>
+                                    {_handleRenderContent(CONTENT_THEIR.content_list_1)}
+                                </div>
+                                <div style={{ padding: '17px' }}>
+                                    {_handleRenderContent(CONTENT_THEIR.content_list_2)}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 }

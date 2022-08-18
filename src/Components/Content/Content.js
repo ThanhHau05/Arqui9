@@ -13,7 +13,7 @@ function Content({ data_title, data_content, classh2, classcontainer }) {
         <div className={cx('wrapper')}>
             <div className={cx('container')}>
                 <div className={cx('title-container')}>
-                    <h2 className={cx(classh2)}>{_handleRenderTitle()}</h2>
+                    <h2 className={cx('title', classh2)}>{_handleRenderTitle()}</h2>
                 </div>
                 <div className={cx('content-container', classcontainer)}>{_handleContent()}</div>
             </div>
