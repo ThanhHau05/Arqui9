@@ -7,6 +7,7 @@ import { ImagesHomeProduct } from '~/Images/ImagesHomeProduct';
 import { ImagesHomeProductVisualisation } from '~/Images/ImagesHomeProductVisualisation';
 import { ImagesHomeLogo } from '~/Images/ImagesHomeLogo';
 import DisplayProduct from '~/Components/DisplayProduct';
+import { Images } from '~/Images/Images';
 const cx = classNames.bind(styles);
 
 const CONTENT_IDEAS_INTO_REALITY = {
@@ -85,6 +86,16 @@ const CONTENT_VIDEOS = {
         text_bold: 'META',
         text_content:
             'Innovators in the metaverse space, Arqui9 has systemically developed various levels of alternate realities, through architectural form and expression. We design, create and explore the alternate worlds for clients in the digital space, creating VR, AR solutions that have become a part of our collective journey.',
+        button_more: {
+            title: 'Learn more',
+            href: '/product',
+        },
+    },
+    collective: {
+        image: Images.ImageTheCollective,
+        text_bold: 'THE COLLECTIVE',
+        text_content:
+            'Our team is comprised of multifaceted multitalented artists, architects and engineers. With a diverse team, we able to tackle the most demanding creative tasks, helping brands, developers, architects and clients build their visions.',
         button_more: {
             title: 'Learn more',
             href: '/product',
@@ -181,8 +192,11 @@ const CONTENT_TECHNOLOGICAL = {
         {
             content: (
                 <p style={{ marginBottom: '0', marginTop: '24px' }}>
-                    Find out about how we helped <a href="/energyvaultinc">EnergyVaultInc</a> in bringing their vision
-                    to life.
+                    Find out about how we helped{' '}
+                    <a href="/energyvaultinc" target="_blank" rel="noreferrer">
+                        EnergyVaultInc
+                    </a>{' '}
+                    in bringing their vision to life.
                 </p>
             ),
         },
@@ -233,7 +247,6 @@ const CONTENT_REALITIES = {
         },
     ],
 };
-
 const CONTENT_THEIR = {
     title: [
         {
@@ -262,7 +275,11 @@ const CONTENT_THEIR = {
             ),
         },
         {
-            content: <p>Steven Velegrinis, Head of Masterplanning AECOM</p>,
+            content: (
+                <p>
+                    <strong>Steven Velegrinis, Head of Masterplanning AECOM</strong>
+                </p>
+            ),
         },
     ],
     content_list_1: [
@@ -393,6 +410,7 @@ function Home() {
                     </div>
                 </div>
             </div>
+            <VideoContent classimage="image" data={CONTENT_VIDEOS.collective} />
         </div>
     );
 }

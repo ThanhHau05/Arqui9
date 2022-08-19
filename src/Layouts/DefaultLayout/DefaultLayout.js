@@ -3,6 +3,7 @@ import Header from '../Components/Header';
 import styles from './DefaultLayout.module.scss';
 import classNames from 'classnames/bind';
 import ScrollTop from '~/Components/ScrollTop';
+import Footer from '../Components/Footer';
 const cx = classNames.bind(styles);
 
 function DefaultLayout({ children }) {
@@ -12,6 +13,7 @@ function DefaultLayout({ children }) {
             <div className={cx('content')}>
                 {children}
                 <ScrollTop />
+                <Footer />
             </div>
         </div>
     );
