@@ -251,9 +251,9 @@ const CONTENT_THEIR = {
     title: [
         {
             title: (
-                <trong>
+                <strong>
                     <em style={{ fontWeight: 'bold' }}>THEIR </em>
-                </trong>
+                </strong>
             ),
         },
         {
@@ -389,7 +389,6 @@ function Home() {
                     <div className={cx('trademark')}>{_handleRenderTrademarks()}</div>
                 </div>
             </div>
-            <div className={cx('trademark-line')}></div>
             <div className={cx('their-content')}>
                 <div className={cx('their-wrap')}>
                     <div className={cx('their-container')}>
@@ -399,10 +398,10 @@ function Home() {
                         <div className={cx('their-content_content')}>
                             <div>{_handleRenderContent(CONTENT_THEIR.content)}</div>
                             <div className={cx('their-content-list')}>
-                                <div style={{ padding: '17px' }}>
+                                <div style={{ padding: '17px 17px 17px 0' }}>
                                     {_handleRenderContent(CONTENT_THEIR.content_list_1)}
                                 </div>
-                                <div style={{ padding: '17px' }}>
+                                <div style={{ padding: '17px 17px 17px 0' }}>
                                     {_handleRenderContent(CONTENT_THEIR.content_list_2)}
                                 </div>
                             </div>
