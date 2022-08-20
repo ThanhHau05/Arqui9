@@ -41,7 +41,39 @@
     height: 10px;
 }
 
+.logo-icon {
+    display: none;
+}
+
 .header-background {
     background-color: #000;
     transition: background-color 140ms ease-in-out 140ms;
+}
+
+@media only screen and (max-width: 63.9375em) {
+}
+
+/* Mobile: width < 740px */
+@media only screen and (max-width: 46.1875em) {
+}
+
+/* Tablet: width >= 740px and width < 1024px */
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+    .wrapper {
+        padding: 6vw;
+    }
+
+    .logo-icon {
+        display: block;
+        max-height: 21px;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .header-background {
+        padding: 2vw 6vw;
+        transition: padding 140ms ease-in-out;
+    }
 }

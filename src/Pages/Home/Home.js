@@ -284,7 +284,7 @@ const CONTENT_THEIR = {
     ],
     content_list_1: [
         {
-            content: <h2 style={{ fontWeight: 'normal', fontSize: '2.58rem', marginBottom: '24px' }}>BPTW London</h2>,
+            content: <h2 className={cx('their-h2')}>BPTW London</h2>,
         },
         {
             content: (
@@ -313,9 +313,7 @@ const CONTENT_THEIR = {
     ],
     content_list_2: [
         {
-            content: (
-                <h2 style={{ fontWeight: 'normal', fontSize: '2.58rem', marginBottom: '24px' }}>Energy Vault Inc</h2>
-            ),
+            content: <h2 className={cx('their-h2')}>Energy Vault Inc</h2>,
         },
         {
             content: (

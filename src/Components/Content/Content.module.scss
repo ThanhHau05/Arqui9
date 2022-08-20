@@ -70,3 +70,39 @@
     padding-right: 10px;
     width: 37%;
 }
+
+@media only screen and (max-width: 63.9375em) {
+}
+
+/* Mobile: width < 740px */
+@media only screen and (max-width: 46.1875em) {
+}
+
+/* Tablet: width >= 740px and width < 1024px */
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+    .wrapper {
+        padding: 12vw 6vw 8vw;
+    }
+
+    .container {
+        display: block;
+    }
+
+    .title-container {
+        padding: 0;
+    }
+
+    .content-container {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .title-container {
+        padding: 3vw 0;
+    }
+
+    .technological-title {
+        display: block;
+        padding-left: 0px;
+    }
+}
