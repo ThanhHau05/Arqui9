@@ -12,7 +12,9 @@ function VideoContent({ data, architectural, classh1, classimage }) {
                 {data.image ? (
                     <img src={data.image} alt="" />
                 ) : (
-                    <video src={data.video} autoPlay loop muted playsInline></video>
+                    <video autoPlay loop muted playsInline>
+                        <source src={data.video} type="video/mp4" />
+                    </video>
                 )}
             </div>
             <div className={cx('content-video-wrapper')}>
