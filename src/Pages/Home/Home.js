@@ -396,10 +396,10 @@ function Home() {
                         <div className={cx('their-content_content')}>
                             <div>{_handleRenderContent(CONTENT_THEIR.content)}</div>
                             <div className={cx('their-content-list')}>
-                                <div style={{ padding: '17px 17px 17px 0' }}>
+                                <div className={cx('their-content-list-content')}>
                                     {_handleRenderContent(CONTENT_THEIR.content_list_1)}
                                 </div>
-                                <div style={{ padding: '17px 17px 17px 0' }}>
+                                <div className={cx('their-content-list-content')}>
                                     {_handleRenderContent(CONTENT_THEIR.content_list_2)}
                                 </div>
                             </div>

@@ -22,7 +22,7 @@ function Header() {
             <div className={cx('container')}>
                 <a style={{ display: 'flex' }} href="/">
                     <img className={cx('logo')} src={Images.Logo} alt="Logo Arqui9" />
-                    <img className={cx('logo-icon')} src={Images.LogoIcon} alt="Logo Arqui9" />
+                    {!bars && <img className={cx('logo-icon')} src={Images.LogoIcon} alt="Logo Arqui9" />}
                 </a>
                 {!bars && (
                     <div className={cx('bars-box')} onClick={() => setBars(true)}>

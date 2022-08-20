@@ -67,14 +67,6 @@ p {
 }
 
 @media only screen and (max-width: 63.9375em) {
-}
-
-/* Mobile: width < 740px */
-@media only screen and (max-width: 46.1875em) {
-}
-
-/* Tablet: width >= 740px and width < 1024px */
-@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
     .wrapper {
         padding: 3.3vw 6vw;
     }
@@ -84,4 +76,12 @@ p {
         justify-content: space-between;
         flex-direction: column;
     }
+}
+
+/* Mobile: width < 740px */
+@media only screen and (max-width: 46.1875em) {
+}
+
+/* Tablet: width >= 740px and width < 1024px */
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
 }

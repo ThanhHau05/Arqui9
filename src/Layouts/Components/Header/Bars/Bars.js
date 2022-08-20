@@ -1,10 +1,11 @@
 import styles from './Bars.module.scss';
 import classNames from 'classnames/bind';
-import { useContext } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { UseContext } from '~/Layouts/DefaultLayout/DefaultLayout';
 import { SiInstagram, SiYoutube, SiBehance } from 'react-icons/si';
 import { FaFacebookF, FaLinkedinIn } from 'react-icons/fa';
 import { FiMail } from 'react-icons/fi';
+import { Images } from '~/Images/Images';
 const cx = classNames.bind(styles);
 
 const ICONS = [
@@ -30,6 +31,7 @@ const ICONS = [
 
 function Bars() {
     const { setBars } = useContext(UseContext);
+    const [count, setCount] = useState('');
     const _hanldeContacts = () => {
         return ICONS.map((item, index) => (
             <div key={index} className={cx('contact')}>
@@ -37,10 +39,20 @@ function Bars() {
             </div>
         ));
     };
+    useEffect(() => {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 99) {
+                setCount('barsp');
+            } else {
+                setCount('');
+            }
+        });
+    }, []);
     return (
         <div className={cx('wrapper')}>
             <div className={cx('container')}>
-                <div className={cx('bars-box-container')}>
+                <div className={cx('bars-box-container', count)}>
+                    <img className={cx('logo-icon')} src={Images.LogoIcon} alt="Logo Arqui9" />
                     <div className={cx('bars-box')} onClick={() => setBars(false)}>
                         <div className={cx('top-bun')}></div>
                         <div className={cx('bottom-bun')}></div>
